@@ -1,11 +1,172 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Polityka prywatności — Pivov YouTube Watch</title><style>body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;line-height:1.65;color:#1f2937}h1,h2{color:#111827}code{background:#f3f4f6;padding:.1rem .3rem;border-radius:4px}hr{margin:2.5rem 0;border:0;border-top:1px solid #ddd}</style></head><body>
-<h1>Polityka prywatności — Pivov YouTube Watch</h1><p>Ostatnia aktualizacja: 10 września 2026 r.</p>
-<h2>1. Zakres</h2><p>Niniejsza polityka opisuje sposób, w jaki Pivov YouTube Watch uzyskuje dostęp do danych użytkownika Google, wykorzystuje je, przechowuje i chroni.</p>
-<h2>2. Dane Google, do których aplikacja uzyskuje dostęp</h2><ul><li><code>youtube.readonly</code> — odczyt subskrypcji oraz metadanych YouTube niezbędnych do monitorowania nowych materiałów;</li><li><code>gmail.send</code> — wysyłanie wiadomości e-mail z powiadomieniami.</li></ul><p>Aplikacja nie używa uprawnień do odczytu skrzynki Gmail, usuwania lub modyfikowania wiadomości, ani do publikowania lub modyfikowania treści YouTube.</p>
-<h2>3. Cel wykorzystania danych</h2><p>Dane są wykorzystywane wyłącznie do wykrywania nowych materiałów na obserwowanych kanałach YouTube, klasyfikowania ich zgodnie z regułami Pivov Watch oraz wysyłania powiadomień e-mail do użytkownika.</p>
-<h2>4. Przechowywanie</h2><p>Konfiguracja aplikacji, identyfikatory przetworzonych materiałów, historia zdarzeń i dane techniczne potrzebne do zapobiegania duplikatom są przechowywane lokalnie na urządzeniu właściciela Pivov Watch. Dane uwierzytelniające OAuth są przechowywane lokalnie i zabezpieczane mechanizmami systemu operacyjnego.</p>
-<h2>5. Udostępnianie danych</h2><p>Dane użytkownika Google nie są sprzedawane, wynajmowane ani udostępniane podmiotom trzecim w celach reklamowych. Dane są przekazywane wyłącznie do usług Google w zakresie technicznie niezbędnym do wykonania autoryzowanych operacji API.</p>
-<h2>6. Retencja i usunięcie</h2><p>Użytkownik może w dowolnym momencie cofnąć zgodę OAuth w ustawieniach swojego konta Google oraz usunąć lokalne dane Pivov YouTube Watch. Po usunięciu lokalnej konfiguracji i tokenów aplikacja traci dostęp do konta Google.</p>
-<h2>7. Bezpieczeństwo</h2><p>Aplikacja stosuje zasadę minimalnych uprawnień i żąda tylko zakresów wymaganych do działania. Dostęp jest ograniczony do autoryzowanego użytkownika i lokalnej instalacji.</p>
-<h2>8. Google API Services User Data Policy</h2><p>Wykorzystanie informacji otrzymanych z Google API jest ograniczone do funkcjonalności opisanej w niniejszej polityce i odbywa się zgodnie z zasadami Google API Services User Data Policy, w tym wymaganiami Limited Use.</p><p><a href="/">Powrót do strony aplikacji</a></p><hr>
-<h1 lang="en">Privacy Policy — Pivov YouTube Watch</h1><p>Last updated: 10 September 2026</p><p>This policy explains how Pivov YouTube Watch accesses, uses, stores, and protects Google user data. The application uses only <code>youtube.readonly</code> to read YouTube subscriptions and related metadata, and <code>gmail.send</code> to send email notifications. It does not read the Gmail inbox, delete or modify email, or publish or modify YouTube content. Data is used only for monitoring and notifications, is stored locally where applicable, is not sold or shared for advertising, and access can be revoked by the user at any time. Use of Google API data complies with the Google API Services User Data Policy, including Limited Use requirements.</p><p><a href="/">Back to application homepage</a></p></body></html>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Polityka prywatności — Pivov YouTube Watch i Pivov Mail</title>
+<meta name="description" content="Polityka prywatności aplikacji Pivov YouTube Watch i Pivov Mail.">
+<style>:root{--bg:#f7f8fa;--card:#ffffff;--ink:#1d2330;--muted:#5b6474;--line:#e3e6ec;--accent:#1f6f5c;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e6e9ee;--muted:#9aa3b2;--line:#2a313c;--accent:#5cc3a6;--code:#232a35}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:32px 16px 48px}
+header.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.brand{font-weight:650;letter-spacing:.2px;color:var(--ink);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px;white-space:nowrap;display:inline-block}
+nav a:hover,nav a[aria-current]{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 28px 20px;margin-bottom:22px}
+h1{font-size:27px;line-height:1.25;margin:0 0 6px}
+h2{font-size:19px;margin:26px 0 8px}
+h3{font-size:16px;margin:18px 0 6px}
+p,li{color:var(--ink)}
+.meta{color:var(--muted);font-size:14px;margin:0 0 18px}
+.lang{font-size:13px;color:var(--muted);margin-bottom:14px}
+.lang a{color:var(--accent)}
+ul{padding-left:22px}
+li{margin:4px 0}
+code{background:var(--code);border-radius:5px;padding:1px 6px;font-size:14px;word-break:break-word}
+a{color:var(--accent)}
+.note{border-left:3px solid var(--accent);padding:6px 0 6px 14px;margin:14px 0;color:var(--ink)}
+footer{color:var(--muted);font-size:13px;text-align:center;margin-top:8px}
+footer a{color:var(--muted)}
+@media (max-width:520px){.card{padding:20px 16px 12px}h1{font-size:23px}nav a{margin:0 12px 0 0}}</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="/">Pivov · aplikacje Google API</a><nav><a href="/">Aplikacje / Apps</a><a href="/privacy/" aria-current="page">Prywatność / Privacy</a><a href="/terms/">Warunki / Terms</a></nav></header>
+
+<section class="card" id="pl">
+<div class="lang">Polski · <a href="#en">English</a></div>
+<h1>Polityka prywatności — Pivov YouTube Watch i Pivov Mail</h1>
+<p class="meta">Ostatnia aktualizacja: 7 października 2026 r. Poprzednia wersja (10 września 2026 r.) obejmowała tylko Pivov YouTube Watch.</p>
+
+<h2>1. Zakres</h2>
+<p>Polityka opisuje, jak dwie prywatne aplikacje systemu Pivov uzyskują dostęp do danych użytkownika Google, wykorzystują je, przechowują, chronią i usuwają:</p>
+<ul>
+<li><strong>Pivov YouTube Watch</strong> — monitorowanie subskrypcji YouTube i powiadomienia e-mail,</li>
+<li><strong>Pivov Mail</strong> — lokalne archiwum i wyszukiwarka poczty właściciela, obejmujące także skrzynkę Gmail.</li>
+</ul>
+<p>Z obu aplikacji korzysta wyłącznie ich właściciel (Pivov Consulting), na własnych kontach Google. Aplikacje nie są udostępniane innym osobom.</p>
+
+<h2>2. Dane Google, do których aplikacje mają dostęp</h2>
+<h3>Pivov YouTube Watch</h3>
+<ul>
+<li><code>youtube.readonly</code> — odczyt subskrypcji i metadanych materiałów YouTube potrzebnych do wykrywania nowych materiałów,</li>
+<li><code>gmail.send</code> — wysyłanie powiadomień e-mail.</li>
+</ul>
+<p>Pivov YouTube Watch nie odczytuje skrzynki Gmail, nie usuwa ani nie zmienia wiadomości i nie publikuje ani nie zmienia treści w YouTube.</p>
+<h3>Pivov Mail</h3>
+<ul>
+<li><code>gmail.readonly</code> — odczyt wiadomości: nagłówków (nadawca, adresaci, temat, data, identyfikatory), treści, załączników i etykiet,</li>
+<li><code>gmail.modify</code> — wyłącznie przenoszenie wiadomości do kosza Gmail (szczegóły w punkcie 3).</li>
+</ul>
+<p>Pivov Mail nie wysyła wiadomości w imieniu użytkownika i nie zmienia ustawień konta, filtrów, przekierowań ani etykiet innych niż kosz.</p>
+
+<h2>3. Cel wykorzystania danych</h2>
+<ul>
+<li><strong>Pivov YouTube Watch:</strong> wykrywanie nowych materiałów na subskrybowanych kanałach, ich klasyfikacja według reguł Pivov Watch i wysyłanie powiadomień e-mail.</li>
+<li><strong>Pivov Mail (odczyt):</strong> zapisanie kopii wiadomości z Gmail w lokalnym archiwum właściciela, razem z pocztą z jego pozostałych skrzynek. Archiwum służy do wyszukiwania po treści wiadomości i załączników, wykrywania duplikatów oraz przygotowywania dla właściciela zestawień i podsumowań jego własnej poczty.</li>
+<li><strong>Pivov Mail (kosz):</strong> zakres <code>gmail.modify</code> służy wyłącznie do przenoszenia do kosza Gmail wiadomości zdublowanych (których kopia jest już w archiwum) albo wskazanych przez właściciela. Dzieje się to tylko na wyraźne polecenie właściciela, po podglądzie listy i potwierdzeniu. Wiadomości z kosza Gmail usuwa trwale Google po 30 dniach.</li>
+</ul>
+<p>Dane nie są wykorzystywane do reklamy, profilowania, oceny zdolności kredytowej ani w żadnym innym celu niż opisany powyżej.</p>
+
+<h2>4. Przetwarzanie lokalne i sztuczna inteligencja</h2>
+<p>Dane pobrane z Google są przetwarzane wyłącznie na komputerze właściciela. Trafiają do lokalnej bazy danych, lokalnego indeksu wyszukiwania i lokalnego magazynu plików. Do wyszukiwania i analizy treści używane są modele językowe uruchomione lokalnie na tym komputerze.</p>
+<div class="note">Dane użytkownika Google nie są przesyłane do zewnętrznych dostawców modeli sztucznej inteligencji ani do innych usług chmurowych. Nie są też używane do tworzenia, trenowania ani ulepszania ogólnych modeli sztucznej inteligencji lub uczenia maszynowego.</div>
+
+<h2>5. Przechowywanie i bezpieczeństwo</h2>
+<ul>
+<li>Tokeny dostępu OAuth są przechowywane lokalnie i szyfrowane mechanizmem ochrony danych systemu Windows (DPAPI). Odczytać je może tylko konto właściciela na tym komputerze.</li>
+<li>Archiwum poczty i dane Pivov Watch znajdują się na dyskach komputera właściciela. Kopie zapasowe trafiają na lokalny dysk kopii, są rotowane i wygasają automatycznie.</li>
+<li>Dostęp zdalny ma wyłącznie właściciel, przez prywatną, szyfrowaną sieć łączącą jego urządzenia. Usługi aplikacji nie są dostępne publicznie z internetu.</li>
+<li>Aplikacje żądają tylko uprawnień niezbędnych do opisanych funkcji. Zakres <code>gmail.modify</code> ma osobny token, używany tylko do operacji na koszu.</li>
+</ul>
+
+<h2>6. Udostępnianie danych</h2>
+<p>Dane użytkownika Google nie są sprzedawane, wynajmowane ani przekazywane innym podmiotom, w tym w celach reklamowych. Wyjątkiem są sytuacje, w których wymagają tego przepisy prawa. Ludzie nie czytają tych danych, poza samym właścicielem, który korzysta z własnej poczty.</p>
+<p>Wiadomości mogą zawierać dane osobowe korespondentów. Są one przetwarzane wyłącznie w prywatnym archiwum właściciela, w zakresie, w jakim właściciel ma do nich dostęp w swojej skrzynce, i nie są nikomu udostępniane.</p>
+
+<h2>7. Retencja i usuwanie danych</h2>
+<ul>
+<li><strong>Pivov YouTube Watch:</strong> identyfikatory materiałów i stan monitorowania są przechowywane do czasu ich usunięcia przez właściciela.</li>
+<li><strong>Pivov Mail:</strong> kopie wiadomości z Gmail pozostają w lokalnym archiwum do czasu ich usunięcia przez właściciela. Właściciel może usunąć pojedyncze wiadomości, całe źródło Gmail albo całe archiwum.</li>
+<li><strong>Cofnięcie zgody:</strong> dostęp aplikacji można w każdej chwili odebrać na stronie <a href="https://myaccount.google.com/permissions">Uprawnienia konta Google</a>. Aplikacja traci wtedy dostęp do danych Google, a lokalne tokeny można usunąć.</li>
+</ul>
+
+<h2>8. Zgodność z zasadami Google</h2>
+<p>Wykorzystanie i przekazywanie innym aplikacjom informacji otrzymanych z Google API przez Pivov YouTube Watch i Pivov Mail jest zgodne z <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, w tym z <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">wymaganiami dotyczącymi ograniczonego wykorzystania (Limited Use)</a>.</p>
+
+<h2>9. Zmiany polityki</h2>
+<p>O zmianach informuje data aktualizacji na początku tej strony. Rozszerzenie zakresu danych albo celów wymaga zmiany tej polityki przed rozpoczęciem nowego przetwarzania.</p>
+</section>
+
+<section class="card" id="en">
+<div class="lang"><a href="#pl">Polski</a> · English</div>
+<h1>Privacy Policy — Pivov YouTube Watch and Pivov Mail</h1>
+<p class="meta">Last updated: 7 October 2026. The previous version (10 September 2026) covered Pivov YouTube Watch only.</p>
+
+<h2>1. Scope</h2>
+<p>This policy explains how two private applications of the Pivov system access, use, store, protect and delete Google user data:</p>
+<ul>
+<li><strong>Pivov YouTube Watch</strong> — monitoring of YouTube subscriptions and email notifications,</li>
+<li><strong>Pivov Mail</strong> — a local archive and search tool for the owner's mail, including the Gmail mailbox.</li>
+</ul>
+<p>Both applications are used only by their owner (Pivov Consulting), with the owner's own Google accounts. They are not made available to anyone else.</p>
+
+<h2>2. Google data the applications access</h2>
+<h3>Pivov YouTube Watch</h3>
+<ul>
+<li><code>youtube.readonly</code> — read YouTube subscriptions and the content metadata required to detect new content,</li>
+<li><code>gmail.send</code> — send email notifications.</li>
+</ul>
+<p>Pivov YouTube Watch does not read the Gmail inbox, does not delete or modify email messages, and does not publish or modify YouTube content.</p>
+<h3>Pivov Mail</h3>
+<ul>
+<li><code>gmail.readonly</code> — read messages: headers (sender, recipients, subject, date, identifiers), body, attachments and labels,</li>
+<li><code>gmail.modify</code> — used only to move messages to the Gmail trash (see section 3).</li>
+</ul>
+<p>Pivov Mail does not send messages on the user's behalf and does not change account settings, filters, forwarding, or any labels other than the trash.</p>
+
+<h2>3. How the data is used</h2>
+<ul>
+<li><strong>Pivov YouTube Watch:</strong> detecting new content on subscribed channels, classifying it according to Pivov Watch rules, and sending email notifications.</li>
+<li><strong>Pivov Mail (read access):</strong> storing copies of Gmail messages in the owner's local archive together with mail from the owner's other mailboxes. The archive is used to search the content of messages and attachments, to detect duplicates, and to prepare overviews and summaries of the owner's own mail for the owner.</li>
+<li><strong>Pivov Mail (trash):</strong> the <code>gmail.modify</code> scope is used only to move to the Gmail trash duplicate messages (already stored in the archive) or messages selected by the owner. This happens only on the owner's explicit instruction, after the list is reviewed and confirmed. Google permanently deletes messages from the Gmail trash after 30 days.</li>
+</ul>
+<p>The data is not used for advertising, profiling, credit assessment or any purpose other than those described above.</p>
+
+<h2>4. Local processing and artificial intelligence</h2>
+<p>Data obtained from Google is processed only on the owner's computer. It is stored in a local database, a local search index and a local file store. Content is searched and analysed by language models running locally on that computer.</p>
+<div class="note">Google user data is not sent to external AI model providers or to any other cloud service. It is not used to develop, train or improve generalised artificial intelligence or machine learning models.</div>
+
+<h2>5. Storage and security</h2>
+<ul>
+<li>OAuth access tokens are stored locally and encrypted with the Windows data protection mechanism (DPAPI). Only the owner's account on that computer can read them.</li>
+<li>The mail archive and Pivov Watch data are kept on the owner's computer disks. Backups go to a local backup disk, are rotated and expire automatically.</li>
+<li>Only the owner has remote access, through a private, encrypted network connecting the owner's devices. The application services are not exposed to the public internet.</li>
+<li>The applications request only the permissions needed for the features described here. The <code>gmail.modify</code> scope has a separate token that is used only for trash operations.</li>
+</ul>
+
+<h2>6. Data sharing</h2>
+<p>Google user data is not sold, rented or transferred to any other party, including for advertising, except where required by law. No one reads the data except the owner, who uses it to work with the owner's own mail.</p>
+<p>Messages may contain personal data of correspondents. It is processed only in the owner's private archive, to the extent the owner already has access to it in the mailbox, and is not shared with anyone.</p>
+
+<h2>7. Retention and deletion</h2>
+<ul>
+<li><strong>Pivov YouTube Watch:</strong> content identifiers and monitoring state are kept until the owner deletes them.</li>
+<li><strong>Pivov Mail:</strong> copies of Gmail messages remain in the local archive until the owner deletes them. The owner can delete individual messages, the whole Gmail source, or the whole archive.</li>
+<li><strong>Revoking access:</strong> access can be revoked at any time on the <a href="https://myaccount.google.com/permissions">Google Account permissions</a> page. The application then loses access to Google data, and the local tokens can be deleted.</li>
+</ul>
+
+<h2>8. Compliance with Google policies</h2>
+<p>Pivov YouTube Watch's and Pivov Mail's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes">Limited Use requirements</a>.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>Changes are indicated by the update date at the top of this page. Any expansion of the data or purposes requires an update of this policy before the new processing begins.</p>
+</section>
+
+<footer>Pivov Consulting · watch.pivovconsulting.com · <a href="/privacy/">Polityka prywatności</a> · <a href="/terms/">Warunki korzystania</a></footer>
+</div>
+</body>
+</html>

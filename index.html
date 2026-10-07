@@ -1,9 +1,94 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pivov YouTube Watch</title><style>body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:40px auto;padding:0 20px;line-height:1.65;color:#1f2937}h1,h2{color:#111827}nav{margin:1.5rem 0}nav a{margin-right:1rem}code{background:#f3f4f6;padding:.1rem .3rem;border-radius:4px}hr{margin:2.5rem 0;border:0;border-top:1px solid #ddd}footer{margin-top:3rem;font-size:.9rem;color:#6b7280}</style></head><body>
-<h1>Pivov YouTube Watch</h1><p><strong>Pivov YouTube Watch</strong> jest prywatnym modułem systemu Pivov Watch służącym do monitorowania subskrybowanych kanałów YouTube, wykrywania nowych materiałów oraz wysyłania powiadomień e-mail.</p>
-<h2>Jak działa</h2><p>Aplikacja korzysta z Google OAuth 2.0 i żąda wyłącznie minimalnych uprawnień potrzebnych do działania.</p><ul><li><code>youtube.readonly</code> — odczyt subskrypcji i metadanych YouTube potrzebnych do wykrywania nowych materiałów.</li><li><code>gmail.send</code> — wysyłanie powiadomień e-mail.</li></ul><p>Aplikacja nie odczytuje skrzynki Gmail, nie usuwa ani nie modyfikuje wiadomości oraz nie publikuje ani nie modyfikuje treści na YouTube.</p>
-<h2>Przetwarzanie danych</h2><p>Konfiguracja i dane operacyjne Pivov YouTube Watch są przetwarzane i przechowywane lokalnie na urządzeniu właściciela Pivov Watch, z wyjątkiem komunikacji niezbędnej do korzystania z Google API.</p>
-<nav><a href="/privacy/">Polityka prywatności</a><a href="/terms/">Warunki korzystania</a></nav><hr>
-<h1 lang="en">Pivov YouTube Watch</h1><p><strong>Pivov YouTube Watch</strong> is a private module of the Pivov Watch system used to monitor subscribed YouTube channels, detect new content, and send email notifications.</p>
-<h2>How it works</h2><p>The application uses Google OAuth 2.0 and requests only the minimum permissions required for its functionality.</p><ul><li><code>youtube.readonly</code> — read YouTube subscriptions and metadata required to detect new content.</li><li><code>gmail.send</code> — send email notifications.</li></ul><p>The application does not read the Gmail inbox, delete or modify email messages, or publish or modify YouTube content.</p>
-<h2>Data processing</h2><p>Pivov YouTube Watch configuration and operational data are processed and stored locally on the Pivov Watch owner's device, except for communication required to use Google API services.</p>
-<nav><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a></nav><footer>Last updated: 10 September 2026</footer></body></html>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pivov YouTube Watch i Pivov Mail — prywatne aplikacje Google API</title>
+<meta name="description" content="Prywatne aplikacje Pivov korzystające z Google API: Pivov YouTube Watch i Pivov Mail.">
+<style>:root{--bg:#f7f8fa;--card:#ffffff;--ink:#1d2330;--muted:#5b6474;--line:#e3e6ec;--accent:#1f6f5c;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e6e9ee;--muted:#9aa3b2;--line:#2a313c;--accent:#5cc3a6;--code:#232a35}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:32px 16px 48px}
+header.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.brand{font-weight:650;letter-spacing:.2px;color:var(--ink);text-decoration:none}
+nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px;white-space:nowrap;display:inline-block}
+nav a:hover,nav a[aria-current]{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 28px 20px;margin-bottom:22px}
+h1{font-size:27px;line-height:1.25;margin:0 0 6px}
+h2{font-size:19px;margin:26px 0 8px}
+h3{font-size:16px;margin:18px 0 6px}
+p,li{color:var(--ink)}
+.meta{color:var(--muted);font-size:14px;margin:0 0 18px}
+.lang{font-size:13px;color:var(--muted);margin-bottom:14px}
+.lang a{color:var(--accent)}
+ul{padding-left:22px}
+li{margin:4px 0}
+code{background:var(--code);border-radius:5px;padding:1px 6px;font-size:14px;word-break:break-word}
+a{color:var(--accent)}
+.note{border-left:3px solid var(--accent);padding:6px 0 6px 14px;margin:14px 0;color:var(--ink)}
+footer{color:var(--muted);font-size:13px;text-align:center;margin-top:8px}
+footer a{color:var(--muted)}
+@media (max-width:520px){.card{padding:20px 16px 12px}h1{font-size:23px}nav a{margin:0 12px 0 0}}</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="/">Pivov · aplikacje Google API</a><nav><a href="/" aria-current="page">Aplikacje / Apps</a><a href="/privacy/">Prywatność / Privacy</a><a href="/terms/">Warunki / Terms</a></nav></header>
+
+<section class="card" id="pl">
+<div class="lang">Polski · <a href="#en">English</a></div>
+<h1>Prywatne aplikacje Pivov korzystające z Google API</h1>
+<p class="meta">Ostatnia aktualizacja: 7 października 2026 r.</p>
+<p>Na tej stronie opisane są dwie prywatne aplikacje systemu Pivov, z których korzysta wyłącznie ich właściciel, na własnych kontach Google. Aplikacje nie są oferowane innym osobom.</p>
+
+<h2>Pivov YouTube Watch</h2>
+<p>Moduł systemu Pivov Watch: monitoruje subskrybowane kanały YouTube, wykrywa nowe materiały i wysyła powiadomienia e-mail.</p>
+<ul>
+<li><code>youtube.readonly</code> — odczyt subskrypcji i metadanych YouTube potrzebnych do wykrywania nowych materiałów,</li>
+<li><code>gmail.send</code> — wysyłanie powiadomień e-mail.</li>
+</ul>
+<p>Pivov YouTube Watch nie odczytuje skrzynki Gmail, nie usuwa ani nie zmienia wiadomości i nie publikuje ani nie zmienia treści w YouTube.</p>
+
+<h2>Pivov Mail</h2>
+<p>Moduł poczty systemu PivovAI: łączy pocztę właściciela z kilku skrzynek, w tym z Gmail, w jednym lokalnym archiwum z wyszukiwaniem po treści wiadomości i załączników.</p>
+<ul>
+<li><code>gmail.readonly</code> — odczyt wiadomości (nagłówki, treść, załączniki, etykiety), żeby zapisać je w lokalnym archiwum i umożliwić wyszukiwanie,</li>
+<li><code>gmail.modify</code> — wyłącznie przenoszenie do kosza Gmail wiadomości zdublowanych (których kopia jest już w archiwum) albo wskazanych przez właściciela; tylko na jego wyraźne polecenie, po podglądzie listy i potwierdzeniu.</li>
+</ul>
+<p>Pivov Mail nie wysyła wiadomości i nie zmienia ustawień konta, filtrów ani przekierowań.</p>
+
+<h2>Przetwarzanie danych</h2>
+<p>Konfiguracja i dane obu aplikacji są przetwarzane i przechowywane lokalnie, na komputerze właściciela. Poza nim dane trafiają tylko do usług Google API, z którymi aplikacje się łączą. Treści z Gmail analizują wyłącznie modele językowe uruchomione lokalnie na tym komputerze. Dane nie są przekazywane zewnętrznym dostawcom AI ani innym podmiotom. Szczegóły zawiera <a href="/privacy/">polityka prywatności</a>.</p>
+</section>
+
+<section class="card" id="en">
+<div class="lang"><a href="#pl">Polski</a> · English</div>
+<h1>Private Pivov applications using Google APIs</h1>
+<p class="meta">Last updated: 7 October 2026</p>
+<p>This site describes two private applications of the Pivov system. They are used only by their owner, with the owner's own Google accounts, and are not offered to anyone else.</p>
+
+<h2>Pivov YouTube Watch</h2>
+<p>A module of the Pivov Watch system that monitors subscribed YouTube channels, detects new content and sends email notifications.</p>
+<ul>
+<li><code>youtube.readonly</code> — read YouTube subscriptions and metadata required to detect new content,</li>
+<li><code>gmail.send</code> — send email notifications.</li>
+</ul>
+<p>Pivov YouTube Watch does not read the Gmail inbox, does not delete or modify email messages, and does not publish or modify YouTube content.</p>
+
+<h2>Pivov Mail</h2>
+<p>The mail module of the PivovAI system. It combines the owner's mail from several mailboxes, including Gmail, into one local archive that can be searched by the content of messages and attachments.</p>
+<ul>
+<li><code>gmail.readonly</code> — read messages (headers, body, attachments, labels) in order to store them in the local archive and make them searchable,</li>
+<li><code>gmail.modify</code> — used only to move to the Gmail trash duplicate messages (already stored in the archive) or messages selected by the owner. This happens only on the owner's explicit instruction, after the list is reviewed and confirmed.</li>
+</ul>
+<p>Pivov Mail does not send messages and does not change account settings, filters or forwarding.</p>
+
+<h2>Data processing</h2>
+<p>Configuration and data of both applications are processed and stored locally on the owner's computer. Data leaves that computer only to reach the Google API services the applications connect to. Gmail content is analysed only by language models running locally on that computer. It is not transferred to external AI providers or to any other party. See the <a href="/privacy/">Privacy Policy</a> for details.</p>
+</section>
+
+<footer>Pivov Consulting · watch.pivovconsulting.com · <a href="/privacy/">Polityka prywatności</a> · <a href="/terms/">Warunki korzystania</a></footer>
+</div>
+</body>
+</html>
